@@ -68,7 +68,7 @@ resource "aws_security_group" "app_sg" {
 
 resource "aws_instance" "app" {
  ami                    = var.ami_id
- instance_type          = "t2.micro"
+ instance_type          = "t3.medium"
  key_name               = var.key_name
  vpc_security_group_ids = [aws_security_group.app_sg.id]
 
